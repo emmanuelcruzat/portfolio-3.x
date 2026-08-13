@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="loading-screen">
+      <span class="loading-text">Emmanuel Cruzat</span>
+    </div>
     <nav>
       <div class="container nav-inner">
         <a href="index.html" class="nav-brand">Emmanuel Cruzat</a>
@@ -32,33 +35,43 @@
             I founded and currently serve as the Vice President of the NJIT
             Rocketry Club. There, I help provide high-level leadership and
             guidance to the club's members, as they work on projects for
-            international competitions, and NASA! (I get to name drop NASA on
-            my portfolio; so cool, right?) I hammer out lots of paperwork for
-            the organization, and also work on building the club's
-            connections with industry partners.
+            international competitions, and NASA! (I get to name drop NASA on my
+            portfolio; so cool, right?) I hammer out lots of paperwork for the
+            organization, and also work on building the club's connections with
+            industry partners.
           </p>
         </section>
         <section class="card card-wide">
           <h2>Content Creation</h2>
           <p>
-            What am I doing when I'm not working... and also not working with
-            my club? I run a Youtube channel where I regularly stream and
-            record content about my favorite game, the 2015 online gaming
-            sensation World of Warships. I won't tell you what the name of
-            the channel is, since I'm assuming it won't do much to help my
-            professional image, but I assure you, it exists.
+            What am I doing when I'm not working... and also not working with my
+            club? I run a Youtube channel where I regularly stream and record
+            content about my favorite game, the 2015 online gaming sensation
+            World of Warships. I won't tell you what the name of the channel is,
+            since I'm assuming it won't do much to help my professional image,
+            but I assure you, it exists.
           </p>
           <p>
             Aside from that, I also enjoy recording and editing non-gaming
             videos.
           </p>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Videos</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">30+</span>
+              <span class="stat-label">Subscribers</span>
+            </div>
+          </div>
         </section>
         <section class="card">
           <h2>Language Learning</h2>
           <p>
-            I've dabbled in learning several languages, including Japanese
-            and Filipino. But weirdly, the language I've had the most
-            success in is Russian.
+            I've dabbled in learning several languages, including Japanese and
+            Filipino. But weirdly, the language I've had the most success in is
+            Russian.
           </p>
           <p>Вы понимаете по-русски?</p>
         </section>
@@ -67,8 +80,8 @@
           <p>
             I enjoy playing chess in my free time, though I can't claim to be
             much good at it. I've got an Elo of 700 on Chess.com, and I
-            consistently lose to all of my friends. At least the game teaches
-            me how to handle failure!
+            consistently lose to all of my friends. At least the game teaches me
+            how to handle failure!
           </p>
           <p>Favorite openings: London System, French Defense, Slav Defense</p>
           <p>I'd consider myself more of a positional player.</p>
@@ -77,12 +90,19 @@
           <h2>Piano</h2>
           <p>
             I used to be pretty good at it when I was younger. Then I stopped
-            practicing and lost most of my skills. I'm trying to build them
-            back up, though.
+            practicing and lost most of my skills. I'm trying to build them back
+            up, though.
           </p>
         </section>
       </div>
     </div>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loading-screen").classList.add("loaded");
+        }, 400);
+      });
+    </script>
     <script>
       (() => {
         const navLinks = document.querySelector(".nav-links");
@@ -111,9 +131,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="footer-name">Emmanuel Cruzat</span>
-        <span class="footer-tagline"
-          >Building cool things, one line at a time.</span
-        >
+        <span class="footer-tagline">Stay up on that rise!</span>
       </div>
       <div class="footer-links">
         <a href="assets/resume.pdf" target="_blank">Resume</a>

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="loading-screen">
+      <span class="loading-text">Emmanuel Cruzat</span>
+    </div>
     <nav>
       <div class="container nav-inner">
         <a href="index.html" class="nav-brand">Emmanuel Cruzat</a>
@@ -366,7 +369,7 @@
               application run on a Linux VM cluster.
             </p>
             <a
-              href="https://github.com/emmanuelcruzat/crimemapper"
+              href="https://github.com/IT490-102SP26/Capstone-Group-06"
               target="_blank"
               >View on GitHub</a
             >
@@ -603,6 +606,13 @@
         </form>
       </div>
     </section>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loading-screen").classList.add("loaded");
+        }, 400);
+      });
+    </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
       new Typed("#typed-greeting", {

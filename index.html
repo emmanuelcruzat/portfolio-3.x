@@ -7,13 +7,31 @@
   </head>
   <body>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="otherside.html">Other Side</a>
+      <a href="index.html" class="nav-brand">Emmanuel Cruzat</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="otherside.html">Other Side</a>
+      </div>
     </nav>
-    <p>Hello, I'm</p>
-    <h1>Emmanuel Cruzat</h1>
-    <img src="assets/headshot.png" id="headshot" alt="Headshot" />
-    <section>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1>Emmanuel Cruzat</h1>
+        <p class="hero-tagline">Computer science student at NJIT focused on full-stack web development, information technology, and cybersecurity.</p>
+        <div class="hero-links">
+          <a class="btn btn-primary" href="assets/resume.pdf" download>Download Resume</a>
+          <a class="btn" href="#projects">My Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+          <a class="btn" href="otherside.html">I Do Other Stuff, Too!</a>
+        </div>
+      </div>
+      <img src="assets/headshot.png" id="headshot" alt="Headshot" />
+    </section>
+    <section id="about">
       <h2>About Me</h2>
       <p>
         I’m Emmanuel Cruzat, and I'm passionate about cybersecurity, artificial
@@ -28,7 +46,7 @@
         video games. Or taking a nap too... this stuff is tiring, alright?
       </p>
     </section>
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <div>
         <h3>
@@ -46,7 +64,7 @@
       </div>
       <p></p>
     </section>
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
       <div>
         <h3>
@@ -62,11 +80,11 @@
         <p>Under construction...</p>
       </div>
     </section>
-    <section>
+    <section id="projects">
       <h2>Selected Work</h2>
       <p>Under construction...</p>
     </section>
-    <section>
+    <section id="certs">
       <h2>Certifications</h2>
       <div>
         <h2>Cybersecurity and Information Technology</h2>
@@ -117,7 +135,7 @@
         </div>
         </div>
     </section>
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
       <h3>Languages</h3>
       <p>C/C++ Java Python JavaScript/TypeScript C#</p>
@@ -131,7 +149,7 @@
       <p></p>Kali Linux Wireshark Metasploit</p>
     </section>
     <section>
-      <h2>Let's Connect!</h2>
+      <h2 id="contact">Let's Connect!</h2>
       <p>Email: <a href="mailto:etc@njit.edu">etc@njit.edu</a></p>
       <p>
         LinkedIn:
@@ -141,4 +159,14 @@
       </p>
     </section>
   </body>
+  <footer>
+    <div>
+      <a href="resume.pdf" target="_blank">Resume</a>
+      <a href="mailto:etc@njit.edu">Email</a>
+      <a href="https://github.com/emmanuelcruzat" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/emmanuel-cruzat/" target="_blank">LinkedIn</a>
+    </div>
+    <p>© 2026 Emmanuel Cruzat. All rights reserved.</p>
+    <p>v3.0 of this humble website. Made with good old-fashioned HTML and CSS.</p>
+  </footer>
 </html>

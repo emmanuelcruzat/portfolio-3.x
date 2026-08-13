@@ -45,8 +45,8 @@
         ></span>
       </div>
       <div class="hero-text">
-        <p class="hero-greeting">Hello, I'm</p>
-        <h1>Emmanuel Cruzat</h1>
+        <p>AI and Software Engineering</p>
+        <h1><span id="typed-greeting"></span></h1>
         <p class="hero-tagline">Computer science student at NJIT focused on full-stack web development, information technology, and cybersecurity.</p>
         <div class="hero-links">
           <a class="btn btn-primary" href="assets/resume.pdf" download>Download Resume</a>
@@ -188,6 +188,28 @@
         >
       </p>
     </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      new Typed('#typed-greeting', {
+        strings: [
+          "Hi, I'm Emmanuel!",
+          'Hallo, ich bin Emmanuel!',
+          'Hola, soy Emmanuel!',
+          'Bonjour, je suis Emmanuel!',
+          'Ciao, sono Emmanuel!',
+          'Привет, меня зовут Эммануэль!',
+          'こんにちは、エマニュエルです！',
+        ],
+        typeSpeed: 55,
+        backSpeed: 35,
+        backDelay: 1200,
+        startDelay: 300,
+        loop: true,
+        smartBackspace: true,
+        showCursor: true,
+        cursorChar: '|',
+      });
+    </script>
   </body>
   <footer>
     <div>

@@ -81,21 +81,29 @@ a {
 }
 
 #headshot {
-  width: 200px;
+  width: 300px;
   height: auto;
   border-radius: 50%;
   flex-shrink: 0;
+  order: -1;
+}
+
+.green {
+  background-color: #0f8a5f;
 }
 
 .hero {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 1200px);
   min-height: calc(100vh - var(--nav-h));
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
-  padding: 2rem 0;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem 1rem;
   margin-bottom: 3rem;
 }
 
@@ -244,14 +252,26 @@ a {
   }
 }
 
-.hero-greeting {
-  margin: 0;
-  color: #555;
-  font-size: 1.1rem;
+.hero-text {
+  flex: 1 1 480px;
+  min-width: 0;
 }
 
 .hero h1 {
   margin: 0.25rem 0;
+  min-height: 1.2em;
+  white-space: nowrap;
+  font-size: clamp(1.4rem, 3vw, 2.5rem);
+}
+
+.typed-cursor {
+  animation: typed-blink 0.7s infinite;
+}
+
+@keyframes typed-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-tagline {
@@ -295,6 +315,10 @@ a {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
+  }
+
+  #headshot {
+    order: 1;
   }
 
   .hero-tagline {

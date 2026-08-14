@@ -685,6 +685,10 @@ a {
   background: #fff;
 }
 
+.otherside-content + .other-section {
+  padding-top: 1rem;
+}
+
 .other-section--tint {
   background: #f2faf6;
 }
@@ -726,6 +730,13 @@ a {
   gap: 1rem;
 }
 
+.other-links--stacked {
+  flex: 0 1 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
 .other-links a {
   display: inline-flex;
   align-items: center;
@@ -750,10 +761,18 @@ a {
 }
 
 .visual-placeholder {
+  position: relative;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(135deg, #0f8a5f, #34d399);
+  transition: transform 0.2s ease;
+}
+
+.visual-placeholder:hover {
+  transform: scale(1.08);
+  animation: img-shake 0.4s ease;
+  z-index: 2;
 }
 
 .visual-placeholder img {
@@ -761,6 +780,122 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+@keyframes img-shake {
+  0%,
+  100% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -2deg;
+  }
+  75% {
+    rotate: 2deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visual-placeholder:hover {
+    animation: none;
+  }
+}
+
+.marquee {
+  margin-top: 2rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: marquee-scroll 55s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  width: 340px;
+}
+
+.marquee-item .visual-placeholder {
+  aspect-ratio: 4 / 3;
+}
+
+.marquee-item .visual-placeholder:hover {
+  transform: none;
+  animation: none;
+  z-index: auto;
+}
+
+.marquee--vertical {
+  margin-top: 0;
+  height: 460px;
+  mask-image: linear-gradient(
+    180deg,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+
+.marquee--vertical .marquee-track {
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  animation-name: marquee-scroll-vertical;
+}
+
+.marquee--vertical .marquee-item {
+  width: 100%;
+  height: 200px;
+}
+
+.marquee--vertical .marquee-item .visual-placeholder {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-scroll-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 700px) {
+  .marquee--vertical {
+    height: 320px;
+  }
+
+  .marquee--vertical .marquee-item {
+    height: 140px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 .card-grid.other-cards {

@@ -670,16 +670,7 @@ a {
 
 .otherside-content {
   padding-top: 2.5rem;
-}
-
-.card-grid.otherside-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-@media (max-width: 600px) {
-  .card-grid.otherside-grid {
-    grid-template-columns: 1fr;
-  }
+  padding-bottom: 1rem;
 }
 
 .subtitle {
@@ -687,11 +678,148 @@ a {
   color: #555;
 }
 
+.other-section {
+  position: relative;
+  margin-bottom: 0;
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.other-section--tint {
+  background: #f2faf6;
+}
+
+.other-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.other-layout--reverse {
+  flex-direction: row-reverse;
+}
+
+.other-text {
+  flex: 1 1 380px;
+}
+
+.other-text h2 {
+  margin-top: 0;
+}
+
+.other-text p {
+  margin: 0 0 1rem;
+}
+
+.other-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.other-text .stat-grid,
+.other-text .other-links {
+  margin-top: 1.5rem;
+}
+
+.other-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.other-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #0f8a5f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.other-links a::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+
+.other-links a:hover::after {
+  transform: translateX(3px);
+}
+
+.other-visual {
+  flex: 1 1 280px;
+}
+
+.visual-placeholder {
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f8a5f, #34d399);
+}
+
+.visual-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-grid.other-cards {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.other-cards .card {
+  background: #fff;
+  border-color: #eee;
+  color: #222;
+}
+
+.other-cards .card:hover {
+  transform: translateY(-4px);
+  border-color: #0f8a5f;
+  box-shadow: 0 12px 24px rgba(15, 138, 95, 0.15);
+}
+
+.other-cards .card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.other-cards .card p {
+  margin: 0 0 1rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.other-cards .card p:last-of-type {
+  margin-bottom: 0;
+}
+
+.other-cards .stat-grid,
+.other-cards .other-links {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  .other-layout,
+  .other-layout--reverse {
+    flex-direction: column;
+  }
+
+  .other-section {
+    padding: 4rem 0;
+  }
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.stat-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 200px;
 }
 
 .stat-card {

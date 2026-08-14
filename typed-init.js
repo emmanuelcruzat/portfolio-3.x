@@ -1,6 +1,7 @@
 new Typed("#typed-greeting", {
   strings: [
     "Hi, I'm Emmanuel!",
+    "Kumusta, ako si Emmanuel!",
     "Hallo, ich bin Emmanuel!",
     "Hola, soy Emmanuel!",
     "Bonjour, je suis Emmanuel!",

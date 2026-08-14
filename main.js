@@ -71,3 +71,37 @@ window.addEventListener("pageshow", (e) => {
     dot.style.opacity = "0";
   });
 })();
+
+(() => {
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+
+  const cursor = document.createElement("div");
+  cursor.className = "custom-cursor";
+  document.body.appendChild(cursor);
+  document.documentElement.classList.add("has-custom-cursor");
+
+  window.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+    cursor.style.opacity = "1";
+  });
+
+  document.documentElement.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "0";
+  });
+
+  const hoverSelector = "a, button, .btn, .card, .stat-card, input, textarea";
+  document.addEventListener(
+    "mouseover",
+    (e) => {
+      if (e.target.closest(hoverSelector)) cursor.classList.add("cursor-hover");
+    },
+    true,
+  );
+  document.addEventListener(
+    "mouseout",
+    (e) => {
+      if (e.target.closest(hoverSelector)) cursor.classList.remove("cursor-hover");
+    },
+    true,
+  );
+})();
